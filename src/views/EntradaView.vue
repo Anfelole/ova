@@ -1,15 +1,15 @@
 <template>
-  <hello-world />
+  <pantalla-entrada />
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import PantallaEntrada from '@/components/pantallaEntrada.vue'
 
   export default {
     name: 'Home',
 
     components: {
-      HelloWorld,
+      PantallaEntrada
     },
   }
 </script>
