@@ -1,6 +1,7 @@
 <template>
 <div>
   <pagina-view><h1>Aqui van las actividades de tu pagina</h1></pagina-view>
+  
 </div>
 </template>
 

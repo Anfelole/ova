@@ -2,18 +2,75 @@
 <!-- App.vue -->
 <v-app>
 
-  <v-app-bar app color="green" dense >
-    <!-- -->
-  <div id="app">
+    <v-app-bar
+      app
+      color="green"
+      dar
+      dense
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Unicordoba</v-toolbar-title>
+
+      
+      <v-spacer></v-spacer>
+
+      <div id="app">
     <nav>
       <router-link to="/contenidos">Contenidos</router-link> |
       <router-link to="/actividades">Actividades</router-link> |
       <router-link to="/evaluacion">Evaluacion</router-link>
     </nav>
   </div>
-  </v-app-bar>
 
+  
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
 
+      <v-btn icon>
+        <v-icon>mdi-filter</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      bottom
+      temporary
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+
+          <v-list-item>
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title><router-link to="/contenidos">Contenidos</router-link></v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title><router-link to="/actividades">Actividades</router-link></v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title><router-link to="/evaluacion">Evaluacion</router-link></v-list-item-title>
+          </v-list-item>
+
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
 
 
 
@@ -78,5 +135,15 @@ nav a.router-link-exact-active {
 export default {
     name: 'PaginaView',
 
+        data: () => ({
+      drawer: false,
+      group: null,
+    }),
+
+    watch: {
+      group () {
+        this.drawer = false
+      },
+    },
 }
 </script>
