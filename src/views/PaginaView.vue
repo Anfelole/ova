@@ -17,26 +17,25 @@
 
       
 
-    <v-toolbar-items class="hidden-sm-and-down">
+    <v-toolbar-items class="hidden-sm-and-down" >
       <v-divider vertical></v-divider>
 
       
-        <router-link to="/contenidos">
-          <v-btn text class="cont">Contenidos</v-btn>
-        </router-link>
-      
+      <v-btn 
+        text
+        to="/contenidos">Contenidos</v-btn>
 
       <v-divider vertical></v-divider>
 
-      <v-btn text>
-        <router-link to="/actividades">Actividades</router-link>
-      </v-btn>
+      <v-btn 
+       text
+       to="/actividades">Actividades</v-btn>
 
       <v-divider vertical></v-divider>
 
-      <v-btn text>
-        <router-link to="/evaluacion">Evaluacion</router-link>
-      </v-btn>
+      <v-btn 
+        text
+        to="/evaluacion">Evaluacion</v-btn>
 
       <v-divider vertical></v-divider>
     </v-toolbar-items>
@@ -77,15 +76,26 @@
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title><router-link to="/contenidos">Contenidos</router-link></v-list-item-title>
+              <v-btn 
+                block
+                text
+                to="/contenidos">Contenidos</v-btn>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title><router-link to="/actividades">Actividades</router-link></v-list-item-title>
+              <v-btn 
+                block
+                text
+                to="/actividades">Actividades</v-btn>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title><router-link to="/evaluacion">Evaluacion</router-link></v-list-item-title>
+
+              <v-btn 
+                block
+                text
+                to="/evaluacion">Evaluacion</v-btn>
+            
           </v-list-item>
 
         </v-list-item-group>
@@ -136,12 +146,7 @@
   text-align: center;
   color: #2c3e50;
 }
- .cont{
-   background-color: aqua;
-   height: 100%;
-   width: 100%;
-   margin-top: 5px;
- }
+ 
 nav {
   padding: 30px;
 }
