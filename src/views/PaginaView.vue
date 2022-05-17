@@ -15,14 +15,34 @@
       
       <v-spacer></v-spacer>
 
-      <div id="app">
-    <nav>
-      <router-link to="/contenidos">Contenidos</router-link> |
-      <router-link to="/actividades">Actividades</router-link> |
-      <router-link to="/evaluacion">Evaluacion</router-link>
-    </nav>
-  </div>
+      
 
+    <v-toolbar-items class="hidden-sm-and-down">
+      <v-divider vertical></v-divider>
+
+      
+        <router-link to="/contenidos">
+          <v-btn text class="cont">Contenidos</v-btn>
+        </router-link>
+      
+
+      <v-divider vertical></v-divider>
+
+      <v-btn text>
+        <router-link to="/actividades">Actividades</router-link>
+      </v-btn>
+
+      <v-divider vertical></v-divider>
+
+      <v-btn text>
+        <router-link to="/evaluacion">Evaluacion</router-link>
+      </v-btn>
+
+      <v-divider vertical></v-divider>
+    </v-toolbar-items>
+
+<v-divider vertical></v-divider>
+<v-spacer></v-spacer>
   
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
@@ -53,7 +73,7 @@
         >
 
           <v-list-item>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title>Unicordoba</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
@@ -79,8 +99,8 @@
       
     <!-- Provides the application the proper gutter -->
     <v-container fluid>
+        <router-view></router-view>
       <!-- If using vue-router -->
-      <router-view></router-view>
       <slot></slot>
     </v-container>
   </v-main>
@@ -116,7 +136,12 @@
   text-align: center;
   color: #2c3e50;
 }
-
+ .cont{
+   background-color: aqua;
+   height: 100%;
+   width: 100%;
+   margin-top: 5px;
+ }
 nav {
   padding: 30px;
 }
@@ -129,21 +154,33 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>
 
 <script>
+
+
 export default {
     name: 'PaginaView',
 
         data: () => ({
       drawer: false,
       group: null,
+
     }),
+
+    methods:  {
+      goContent() {
+         
+    },
+    },
 
     watch: {
       group () {
         this.drawer = false
       },
     },
+
+    
 }
 </script>
