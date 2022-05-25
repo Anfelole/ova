@@ -11,14 +11,23 @@
     <v-row no-gutters>
       <v-col align="center">
         <input type="button"/>
-        <div class="content">
-          <router-link :to="{ name: 'contenidos' }" class="text-decoration-none routernone">
-            <v-img class="play mt-10 px-n12" src="../assets/logo.png.png"></v-img> 
+        <div class="content fondo2 imagen" >
+          
+          <div class="">
+          <router-link :to="{ name: 'contenidos' }" class="text-decoration-none routernone mb-4" >
+            <v-img class="play " src="../assets/logo.png.png"></v-img> 
           </router-link>
+          
           <div class="sombra"></div>
-          <BR></BR>
-          <h1 class="title">TIPOS DE DATOS</h1>
+          </div>
         </div>
+        <v-row>
+          <v-col> 
+            <div class="text">
+          <h1 class=".display-4 font-weight-black" >TIPOS DE DATOS</h1>
+          </div>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   
@@ -32,23 +41,38 @@
 </template>
 
 <style>
-
-        .fondo{
-          background-image: url(../assets/background.png)
-          
+        .text{
+          color: blue;
+          margin: 2rem;
         }
-          .title{
-            color: white;
-          }
+        .fondo{
+          background-image: url(../assets/background.png);          
+        }
+       
         .content{
             width: 100%;
+            height: 80%;
+            display: flex;
         }
 
         .play{
-            width: 290px;
+            width: 150px;
             background-size: cover;
             animation: animar  1s infinite alternate;
             }
+        .fondo2{
+          border: 1px solid #fff;
+          border-radius: 10px;
+          width: 30rem;
+          height: 24rem;
+          background-color: #fff;
+          opacity: 0.7;
+          align-items: center;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+
+        }
 
         .sombra{
             height: 100px;
@@ -57,8 +81,9 @@
             border-radius: 50%;
             transform: rotatex(-80deg);
             animation: sombra 1s infinite alternate;
+           
+            
         }
-
         @keyframes animar{
             to{
                 transform: translateY(-50px)
@@ -71,7 +96,6 @@
                 opacity: 0.2;
             }
         }
-        
       
 </style>
 
