@@ -1,101 +1,119 @@
 <template>
-<!-- App.vue -->
 
-<v-app>
+  <v-app>
+
+
+
+
   <!-- Sizes your content based upon application components -->
-  <v-main class="fondo">
+ 
+
+<br><br><br><br><br><br><br><br><br>
+<div class="context">
+          <router-link :to="{ name: 'contenidos' }" class="text-decoration-none" >
+            <div class="bounce" >
+             <span class="letter">C</span><span class="letter">i</span><span class="letter">c</span><span class="letter">l</span><span class="letter">o</span><span class="letter">s</span>
+            </div>
+    </router-link>
+    </div>
+
+  
+
+    
+
 
     <!-- Provides the application the proper gutter -->
-    <v-container>
-    <br><br>
-    <v-row no-gutters>
-      <v-col align="center">
-        <input type="button"/>
-        <div class="content fondo2 imagen" >
-          
-          <div class="">
-          <router-link :to="{ name: 'contenidos' }" class="text-decoration-none routernone mb-4" >
-            <v-img class="play " src="../assets/logo.png.png"></v-img> 
-          </router-link>
-          
-          <div class="sombra"></div>
-          </div>
-        </div>
-        <v-row>
-          <v-col> 
-            <div class="text">
-          <h1 class=".display-4 font-weight-black" >TIPOS DE DATOS</h1>
-          </div>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
-  
-  </v-container>
-  </v-main>
-
+    <v-container fluid>
+      <router-view></router-view>
+    </v-container>
 
 </v-app>
-
+ 
 
 </template>
 
 <style>
-        .text{
-          color: blue;
-          margin: 2rem;
-        }
-        .fondo{
-          background-image: url(../assets/background.png);          
-        }
-       
-        .content{
-            width: 100%;
-            height: 80%;
-            display: flex;
-        }
 
-        .play{
-            width: 150px;
-            background-size: cover;
-            animation: animar  1s infinite alternate;
-            }
-        .fondo2{
-          border: 1px solid #fff;
-          border-radius: 10px;
-          width: 30rem;
-          height: 24rem;
-          background-color: #fff;
-          opacity: 0.7;
+
+        .bounce {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
           align-items: center;
-          display: flex;
-          align-content: center;
+  -webkit-box-pack: center;
           justify-content: center;
+  width: 100%;
+  height: 100%;
+  font: normal bold 6rem "Product Sans", sans-serif;
+  white-space: nowrap;
+}
 
-        }
+.letter {
+  -webkit-animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+          animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+  display: inline-block;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  margin-top: 0.5em;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em;
+  font: normal bold 6rem "Product Sans", sans-serif;
+}
+.letter:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  color: #4285f4;
+}
+.letter:nth-child(2) {
+  -webkit-animation-delay: 0.0833333333s;
+          animation-delay: 0.0833333333s;
+  color: #ea4335;
+}
+.letter:nth-child(3) {
+  -webkit-animation-delay: 0.1666666667s;
+          animation-delay: 0.1666666667s;
+  color: #fbbc05;
+}
+.letter:nth-child(4) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  color: #4285f4;
+}
+.letter:nth-child(5) {
+  -webkit-animation-delay: 0.3333333333s;
+          animation-delay: 0.3333333333s;
+  color: #34a853;
+}
+.letter:nth-child(6) {
+  -webkit-animation-delay: 0.4166666667s;
+          animation-delay: 0.4166666667s;
+  color: #ea4335;
+}
 
-        .sombra{
-            height: 100px;
-            width: 300px;
-            background:rgb(168, 168, 168);
-            border-radius: 50%;
-            transform: rotatex(-80deg);
-            animation: sombra 1s infinite alternate;
-           
-            
-        }
-        @keyframes animar{
-            to{
-                transform: translateY(-50px)
-            } 
-        }
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em;
+  }
+  100% {
+    -webkit-transform: translate3d(0, -1em, 0);
+            transform: translate3d(0, -1em, 0);
+    text-shadow: rgba(0, 0, 0, 0.4) 0 1em 0.35em;
+  }
+}
 
-        @keyframes sombra{
-            to{
-                transform: scale(0.6) rotateX(-70deg);
-                opacity: 0.2;
-            }
-        }
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em;
+  }
+  100% {
+    -webkit-transform: translate3d(0, -1em, 0);
+            transform: translate3d(0, -1em, 0);
+    text-shadow: rgba(0, 0, 0, 0.4) 0 1em 0.35em;
+  }
+}
       
 </style>
 

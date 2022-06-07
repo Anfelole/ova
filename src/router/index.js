@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/',
     name: 'entrada',
-    component: pantallaEntrada
+    component: pantallaEntrada,
   },
   {
     path: '/contenidos',
