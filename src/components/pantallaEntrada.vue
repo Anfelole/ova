@@ -1,41 +1,34 @@
 <template>
-
   <v-app>
-
-
-
-
-  <!-- Sizes your content based upon application components -->
- 
-
-<br><br><br><br><br><br><br><br><br>
-<div class="context">
-          <router-link :to="{ name: 'contenidos' }" class="text-decoration-none" >
-            <div class="bounce" >
-             <span class="letter">C</span><span class="letter">i</span><span class="letter">c</span><span class="letter">l</span><span class="letter">o</span><span class="letter">s</span>
-            </div>
-    </router-link>
-    </div>
-
-  
-
-    
-
-
-    <!-- Provides the application the proper gutter -->
-    <v-container fluid>
-      <router-view></router-view>
-    </v-container>
-
-</v-app>
- 
-
+    <v-main class="fondo fill-height">
+      <v-container>
+        <v-row class="pt-15">
+          <v-col>
+            <div class="bounce"><span class="letter">G</span><span class="letter">o</span><span class="letter">o</span><span class="letter">g</span><span class="letter">l</span><span class="letter">e</span></div>
+          </v-col>
+        </v-row>
+        <v-row no-gutters>
+          <v-col align="center">
+            <input type="button"/>
+            <div class="fondo2 " >
+              <div class="pt-16 imagen">
+                <router-link :to="{ name: 'contenidos' }" class="text-decoration-none routernone mb-4" >
+                  <v-img class="play mt-10" src="../assets/logo.png.png"></v-img> 
+                </router-link>
+                <div class="sombra"></div>
+              </div>                     
+            </div>        
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <style>
+/*=== texto ===*/
 
-
-        .bounce {
+.bounce {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -114,9 +107,55 @@
     text-shadow: rgba(0, 0, 0, 0.4) 0 1em 0.35em;
   }
 }
-      
-</style>
 
+/*==============*/
+.fondo{
+  background: url(https://www.apañados.es/images/images33/gif-david-whyte-4.gif) no-repeat;
+  background-size: 100% 100%;
+}
+
+.play{
+    width: 150px;
+    background-size: cover;
+    animation: animar  1s infinite alternate;
+    
+    }
+.fondo2{
+  border-radius: 40px ;
+  border: #0f0f0f5d;
+  width: 20rem;
+  height: 24rem;
+  background: #49474746; 
+}
+.fondo2, main{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sombra{
+    height: 100px;
+    width: 300px;
+    background:rgba(255, 255, 255, 0.795);
+    border-radius: 50%;
+    transform: rotatex(-80deg);
+    animation: sombra 1s infinite alternate; 
+}
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@keyframes animar{
+    to{
+        transform: translateY(-50px)
+    } 
+}
+
+@keyframes sombra{
+    to{
+        transform: scale(0.6) rotateX(-70deg);
+        opacity: 0.2;
+    }
+}
+
+</style>
 
 <script>
 export default {
