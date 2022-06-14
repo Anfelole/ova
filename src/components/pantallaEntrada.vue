@@ -4,7 +4,14 @@
       <v-container>
         <v-row class="pt-15">
           <v-col>
-            <div class="bounce"><span class="letter">G</span><span class="letter">o</span><span class="letter">o</span><span class="letter">g</span><span class="letter">l</span><span class="letter">e</span></div>
+            <div class="bounce">
+              <span class="letter"><strong>C</strong></span>
+              <span class="letter"><strong>I</strong></span>
+              <span class="letter"><strong>C</strong></span>
+              <span class="letter"><strong>L</strong></span>
+              <span class="letter"><strong>O</strong></span>
+              <span class="letter"><strong>S</strong></span>
+            </div>
           </v-col>
         </v-row>
         <v-row no-gutters>
@@ -125,7 +132,7 @@
   border: #0f0f0f5d;
   width: 20rem;
   height: 24rem;
-  background: #49474746; 
+  background: #2c2c2cab; 
 }
 .fondo2, main{
    display: flex;

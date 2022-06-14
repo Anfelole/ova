@@ -4,23 +4,21 @@
 
     <v-app-bar
       app
-      color="green"
+      class="color  white--text"
       dar
       dense
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Unicordoba</v-toolbar-title>
+      <v-toolbar-title>Aprendiendo Ciclo For</v-toolbar-title>
 
       
       <v-spacer></v-spacer>
 
       
 
-    <v-toolbar-items class="hidden-sm-and-down" >
+    <v-toolbar-items class="hidden-sm-and-down ">
       <v-divider vertical></v-divider>
-
-      
       <v-btn 
         text
         to="/contenidos">Contenidos</v-btn>
@@ -43,24 +41,14 @@
 <v-divider vertical></v-divider>
 <v-spacer></v-spacer>
   
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-filter</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
     </v-app-bar>
 
     <v-navigation-drawer
       v-model="drawer"
-      absolute
+      fixed
       bottom
       temporary
+      class="menu"
     >
       <v-list
         nav
@@ -68,11 +56,15 @@
       >
         <v-list-item-group
           v-model="group"
-          active-class="deep-purple--text text--accent-4"
+          active-class="deep-purple--text  white--text text--accent-4"
         >
 
           <v-list-item>
-            <v-list-item-title>Unicordoba</v-list-item-title>
+            <v-btn to="/" block
+                text>
+              Inicio
+            </v-btn>
+            
           </v-list-item>
 
           <v-list-item>
@@ -101,9 +93,6 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-
-
-
   <!-- Sizes your content based upon application components -->
   <v-main>
       
@@ -145,6 +134,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-image: linear-gradient(135deg, #9558d9 0, #764dd7 25%, #4d42d4 50%, #003ad1 75%, #0034cf 100%);  
 }
  
 nav {
@@ -153,13 +143,18 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #6accb3;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
 }
-
+.color{
+background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+}
+.menu{
+  background-image: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);
+}
 </style>
 
 <script>
