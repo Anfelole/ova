@@ -4,9 +4,7 @@ import pantallaEntrada from '../views/EntradaView.vue'
 import Actividades from "@/components/Actividades.vue"
 import Contenidos from "@/components/Contenidos.vue"
 import Evaluacion from "@/components/Evaluacion.vue"
-
 Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/',

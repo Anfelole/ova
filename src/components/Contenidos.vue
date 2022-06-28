@@ -2,18 +2,54 @@
   <div>
     <pagina-view>
       <template>
-        <div id="app">
           <v-app>
-            <v-content>
-              <v-container>
-                <v-carousel>
-                  <v-carousel-item v-for="item in items" :key="item.id" v-html="item.content">
-                  </v-carousel-item>
-                </v-carousel>
-              </v-container>
-            </v-content>
+             <div id="app" class="flex-container">
+              
+                <div class="card">             
+                    <v-card elevation="13" height="350px">
+                      <iframe 
+                      src="https://www.youtube.com/embed/h6kJT_CeWLQ" 
+                      title="Curso Básico de Javascript 7.- Ciclo For" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen></iframe>
+                    </v-card>
+                 </div>
+
+                 <div class="card">
+                      <v-card elevation="13" height="350px">
+                        <iframe 
+                        src="https://www.youtube.com/embed/51DHd4-zQi0" 
+                        title="6.- Curso javaScript - Ciclo For" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                    </v-card>
+                 </div>
+
+                 <div class="card">
+                   <v-card elevation="13" height="350px">
+                        <iframe 
+                         src="https://www.youtube.com/embed/ZK0cfptuHAI" 
+                         title="#12 - Bucle for - Curso básico de JavaScript 2018" 
+                         frameborder="0" 
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                         allowfullscreen></iframe>
+                    </v-card>
+                 </div>
+
+                 <div class="card">
+                   <v-card elevation="13" height="350px">
+                        <iframe  
+                        src="https://www.youtube.com/embed/1NzaAJoWcfk" 
+                        title="Ejercicios prácticos con el ciclo for" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                    </v-card>
+                 </div>
+             </div>     
           </v-app>
-        </div>
       </template>
     </pagina-view>
   </div>
@@ -21,10 +57,22 @@
 </template>
 
 <style>
-
 #app iframe {
   width: 100%;
-  height: 500px;
+  height: 100%;
+}
+.flex-container{
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 1em;
+}
+.card{
+  width: 40rem;
+  height:auto;
 }
 
 </style>
@@ -38,27 +86,8 @@ export default {
   components: {
     PaginaView
   },
-  //Corregir enlaces
     data: () => ({
-      items: [{
-        id: "1",
-        content: '<iframe width="640" height="360" src="https://www.youtube.com/embed/51DHd4-zQi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-      },
-      {
-        id: "2",
-        content: '<iframe width="560" height="315" src="https://youtu.be/ZK0cfptuHAI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-      },
       
-      {
-        id: "3",
-        content: '<iframe width="560" height="315" src="https://www.youtube.com/watch?v=G0uvM98lmd8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-      },
-      
-      {
-        id: "4",
-        content: '<iframe width="560" height="315" src="https://www.youtube.com/watch?v=G0uvM98lmd8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-      }
-      ]
     })
 }
 </script>

@@ -105,11 +105,6 @@
   </v-main>
 
 
-
-
-
-
-
   <v-footer app color="primary lighten-1" padless>
     <!-- -->
     <v-row
@@ -129,12 +124,10 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   background-image: linear-gradient(135deg, #9558d9 0, #764dd7 25%, #4d42d4 50%, #003ad1 75%, #0034cf 100%);  
+
 }
  
 nav {
