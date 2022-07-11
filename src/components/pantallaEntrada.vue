@@ -37,7 +37,7 @@
             <div class="fondo2 " >
               <div class="pt-16 imagen">
                 <router-link :to="{ name: 'contenidos' }" class="text-decoration-none routernone mb-4" >
-                  <v-img class="play mt-10" src="../assets/logo.png.png"></v-img> 
+                  <v-img class="play mt-10" src="../assets/logo.png"></v-img> 
                 </router-link>
                 <div class="sombra"></div>
               </div>                     

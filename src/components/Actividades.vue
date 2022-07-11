@@ -1,11 +1,36 @@
 <template>
 <pagina-view>
-<div id="h5p-actividad_1">
-<p class="descripcion">Arrastra las palabras segun lo que se deceche en cada caneca</p>
+  <template>
+
+<v-container>
+<router-view></router-view>
+
+<div class="allactivities">
+<v-btn class="botonsig" to="/ejercicio1">ACTIVIDAD 1</v-btn>
+<v-btn class="botonsig" to="/ejercicio2">ACTIVIDAD 2</v-btn>
+<v-btn class="botonsig" to="/ejercicio3">ACTIVIDAD 3</v-btn>
 </div>
-</pagina-view>
+
+</v-container>
+
 </template>
 
+
+</pagina-view>
+</template>
+<style>
+
+.allactivities{
+    text-align: center;
+}
+
+.botonsig{
+    margin-top: 10px;
+    margin: 5px;
+    
+}
+
+</style>
 <script>
 import PaginaView from "@/views/PaginaView.vue";
 import { H5P } from 'h5p-standalone';

@@ -4,6 +4,9 @@ import pantallaEntrada from '../views/EntradaView.vue'
 import Actividades from "@/components/Actividades.vue"
 import Contenidos from "@/components/Contenidos.vue"
 import Evaluacion from "@/components/Evaluacion.vue"
+import ejercicio1 from '@/components/actividades/ejercicio1'
+import ejercicio2 from '@/components/actividades/ejercicio2'
+import ejercicio3 from '@/components/actividades/ejercicio3'
 Vue.use(VueRouter)
 const routes = [
   {
@@ -19,7 +22,23 @@ const routes = [
   {
     path: '/actividades',
     name: 'actividades',
-    component: Actividades
+    component: Actividades,
+    children:[
+      {
+        path: '/ejercicio1',
+        name: 'ejercicio1',
+        component: ejercicio1,
+      },
+      {
+        path: '/ejercicio2',
+        name: 'ejercicio2',
+        component: ejercicio2,
+      },
+      {
+        path: '/ejercicio3',
+        name: 'ejercicio3',
+        component: ejercicio3,
+      },]
   },
   {
     path: '/evaluacion',
