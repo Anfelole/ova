@@ -1,7 +1,7 @@
 <template>
 <pagina-view>
 <div id="h5p-actividad_1">
-<p class="descripcion">Arrastra las palabras segun lo que se deseche en cada caneca</p>
+<p class="descripcion">Arrastra las palabras segun lo que se deceche en cada caneca</p>
 </div>
 </pagina-view>
 </template>
