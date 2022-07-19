@@ -35,6 +35,12 @@
         text
         to="/evaluacion">Evaluacion</v-btn>
 
+        <v-divider vertical></v-divider>
+
+        <v-btn 
+        text
+        to="/creditos">Creditos</v-btn>
+
       <v-divider vertical></v-divider>
     </v-toolbar-items>
 
@@ -87,6 +93,15 @@
                 block
                 text
                 to="/evaluacion">Evaluacion</v-btn>
+            
+          </v-list-item>
+
+          <v-list-item>
+
+              <v-btn 
+                block
+                text
+                to="/creditos">Creditos</v-btn>
             
           </v-list-item>
 
@@ -156,7 +171,7 @@ background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%,
 export default {
     name: 'PaginaView',
 
-        data: () => ({
+      data: () => ({
       drawer: false,
       group: null,
 

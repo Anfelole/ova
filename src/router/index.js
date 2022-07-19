@@ -4,6 +4,7 @@ import pantallaEntrada from '../views/EntradaView.vue'
 import Actividades from "@/components/Actividades.vue"
 import Contenidos from "@/components/Contenidos.vue"
 import Evaluacion from "@/components/Evaluacion.vue"
+import Creditos from "@/components/Creditos.vue"
 import ejercicio1 from '@/components/actividades/ejercicio1'
 import ejercicio2 from '@/components/actividades/ejercicio2'
 import ejercicio3 from '@/components/actividades/ejercicio3'
@@ -44,6 +45,11 @@ const routes = [
     path: '/evaluacion',
     name: 'evaluacion',
     component: Evaluacion
+  },
+  {
+    path: '/creditos',
+    name: 'creditos',
+    component: Creditos
   },
 ]
 
